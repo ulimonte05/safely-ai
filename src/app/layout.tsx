@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AppProvider } from "@/context/AppContext";
-import Navbar from "@/components/Layout/Navbar";
+import LayoutWrapper from "@/components/Layout/LayoutWrapper";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -30,12 +30,9 @@ export default function RootLayout({
     <html lang="es" className="dark">
       <body className={`${inter.variable} antialiased bg-gradient-dark min-h-screen`}>
         <AppProvider>
-          <div className="flex flex-col min-h-screen">
-            <Navbar />
-            <main className="flex-1 p-4 sm:p-6 lg:p-8">
-              {children}
-            </main>
-          </div>
+          <LayoutWrapper>
+            {children}
+          </LayoutWrapper>
         </AppProvider>
       </body>
     </html>

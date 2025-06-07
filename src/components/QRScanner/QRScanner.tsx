@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { Camera, QrCode, Download, Scan, CheckCircle, X, Users, Shield } from 'lucide-react';
 import { useApp } from '@/context/AppContext';
 import { mockChildren } from '@/lib/mockData';
@@ -173,7 +174,13 @@ const QRScanner = () => {
 
                   {/* Código QR */}
                   <div className="w-32 h-32 mx-auto bg-white rounded-lg p-2 shadow-lg">
-                    {generateQRCode(child.id)}
+                    <Image 
+                      src="/qr-code.png" 
+                      alt={`QR Code para ${child.name}`}
+                      width={112}
+                      height={112}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
 
                   <div className="space-y-2">

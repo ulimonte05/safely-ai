@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { 
   Users, 
   Plus, 
@@ -332,10 +333,14 @@ const ChildrenPage = () => {
                 <div className="mt-4 pt-4 border-t border-border/50">
                   <div className="text-center">
                     <p className="text-xs text-muted-foreground mb-2">Código QR</p>
-                    <div className="bg-white rounded-lg p-2 inline-block">
-                      <div className="w-16 h-16 bg-gray-800 rounded flex items-center justify-center">
-                        <span className="text-white text-xs font-mono">QR</span>
-                      </div>
+                    <div className="bg-white rounded-lg p-1 inline-block">
+                      <Image 
+                        src="/qr-code.png" 
+                        alt={`QR Code para ${child.name}`}
+                        width={56}
+                        height={56}
+                        className="w-14 h-14 object-contain"
+                      />
                     </div>
                   </div>
                 </div>

@@ -26,9 +26,9 @@ const SettingsPage = () => {
   const { state, dispatch } = useApp();
   const [isEditingProfile, setIsEditingProfile] = useState(false);
   const [profileData, setProfileData] = useState({
-    name: 'Usuario Principal',
-    email: 'usuario@familyguard.com',
-    phone: '+34 612 345 678'
+    name: 'Carlos Fernández',
+    email: 'carlos.fernandez@gmail.com',
+    phone: '+54 11 4567 8910'
   });
 
   const [notifications, setNotifications] = useState({
@@ -357,15 +357,15 @@ const SettingsPage = () => {
           <div className="space-y-4">
             <div className="flex justify-between items-center p-3 bg-accent/20 rounded-lg">
               <span className="text-muted-foreground">Versión</span>
-              <span className="text-foreground font-semibold">2.1.4</span>
+              <span className="text-foreground font-semibold">3.2.1</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-accent/20 rounded-lg">
               <span className="text-muted-foreground">Última actualización</span>
-              <span className="text-foreground font-semibold">15 Ene 2024</span>
+              <span className="text-foreground font-semibold">12 Dic 2024</span>
             </div>
             <div className="flex justify-between items-center p-3 bg-accent/20 rounded-lg">
               <span className="text-muted-foreground">Desarrollador</span>
-              <span className="text-foreground font-semibold">Safely AI</span>
+              <span className="text-foreground font-semibold">Safely AI Argentina</span>
             </div>
           </div>
           
